@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package auth;
+
+enum SDKType {
+    SDK_UNKNOWN  = 0;
+    SDK_OFFICIAL = 1;
+    SDK_QQ       = 2;
+    SDK_WEIXIN   = 3;
+    SDK_WEIBO    = 4;
+} 
+
+
+

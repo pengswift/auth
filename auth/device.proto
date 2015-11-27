@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package auth;
+
+message Device {
+    string os            = 1;  // 设备OS
+    string osVersion     = 2;  // 设备版本
+    string resolution    = 3;  // 分辨率
+    string ua            = 4;  // 设备use-agent
+    string clientVersion = 5;  // 客户端版本号
+    string mac           = 6;  // 设备物理地址
+    string udid          = 7;  // 移动设备唯一标示
+    string idfa          = 8;  // ios advertisingIdentifier ios6.0 后替代uuid
+    string idfv          = 9;  // ios identifierForVendor ios6.0 区分vender
+    string appid         = 10;
+}
+

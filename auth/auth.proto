@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package auth;
+
+import "sdk.proto";
+import "device.proto";
+
+message AuthRequest {
+    string username = 1;
+    string password = 2;
+    string version  = 3;   // 协议版本 区分登陆方式
+    SDKType sdkType = 4;
+    Device device   = 5;
+}
+
+message AuthResponse {
+    int32 userid       = 1;
+    int32 lastServerID = 2;
+}
+
+service AuthService {
+    rpc Login(AuthRequest) returns (AuthResponse);
+}
